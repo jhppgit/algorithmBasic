@@ -1,0 +1,22 @@
+package algorithm.ch01;
+
+import java.util.Scanner;
+
+public class Q9 {
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
+		int[] inputArr = new int[2];
+		String[] strArr = {"a값 : ", "b값 : "};
+		int input;
+		int i = 0;
+		do {
+			System.out.print(strArr[i]);
+			input = stdIn.nextInt();
+			if(input > 0) {
+				inputArr[i] = input;
+				i++;
+			}
+		} while(i == 3);
+		int a = 
+	}
+}

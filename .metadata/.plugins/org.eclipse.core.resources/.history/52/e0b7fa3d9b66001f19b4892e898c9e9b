@@ -1,0 +1,6 @@
+package algorithm.quiz.ch04;
+
+// 배열로 큐 만들기
+public class IntArrayQueue {
+	private
+}

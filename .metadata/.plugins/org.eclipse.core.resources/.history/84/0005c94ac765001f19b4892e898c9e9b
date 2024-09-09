@@ -1,0 +1,35 @@
+package algorithm.quiz.ch03;
+
+// 이진탐색 과정 출력 첫요소 <-, 끝요소 ->, 중앙요소 +
+public class Q4 {
+	static void printArr(int[] a) {
+		int n = a.length;
+		for (int i = 0; i < n; i++) {
+			System.out.printf("%3d", a[i]);
+		}
+		System.out.println();
+	}
+	
+	static int BSearch(int[] a, int n, int key) {
+		int pl = 0;
+		int pr = n - 1;
+		
+		System.out.print("    | ");
+		for (int i = 0; i < n; i++) {
+			System.out.print(false);
+		}
+		
+		do {
+			int pc = (pl + pr) / 2;
+			
+			if (a[pc] == key)
+				return pc;
+			else if (a[pc] > key)
+				pr = pc - 1;
+			else
+				pl = pc + 1;
+		} while (pr >= pl);
+		
+		return -1;
+	}
+}

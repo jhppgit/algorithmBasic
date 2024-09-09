@@ -1,0 +1,83 @@
+package algorithm.quiz.ch04;
+
+// 양방향 큐 구현
+public class IntDeque {
+	private int[] que;
+	private int num;
+	private int capacity;
+	private int front;
+	private int rear;
+	
+	public class OverflowIntDequeException extends RuntimeException {
+		public OverflowIntDequeException() {}
+	}
+	public class EmptyIntDequeException extends RuntimeException {
+		public EmptyIntDequeException() {}
+	}
+	
+	public IntDeque(int maxlen) {
+		num = rear = front = 0;
+		capacity = maxlen;
+		try {
+			que = new int[maxlen];
+		} catch (OutOfMemoryError e) {
+			capacity = 0;
+		}
+	}
+	
+	public int enqueFront(int x) throws OverflowIntDequeException {
+		if (num >= capacity)
+			throw new OverflowIntDequeException();
+		if (front == 0)
+			front = capacity - 1;
+		else
+			front--;
+		que[front] = x;
+		num++;
+		return x;
+	}
+	
+	public int enqueRear(int x) throws OverflowIntDequeException {
+		if (num >= capacity)
+			throw new OverflowIntDequeException();
+		que[rear++] = x;
+		num++;
+		if (rear == capacity)
+			rear = 0;
+		return x;
+	}
+	
+	public int dequeFront() throws EmptyIntDequeException {
+		if (num <= 0)
+			throw new EmptyIntDequeException();
+		int result = que[front++];
+		num--;
+		if (front == capacity)
+			front = 0;
+		return result;
+	}
+	
+	public int dequeRear() throws EmptyIntDequeException {
+		if (num <= 0)
+			throw new EmptyIntDequeException();
+		int result = que[rear];
+		num--;
+		if (rear == 0)
+			rear = capacity - 1;
+		else 
+			rear--;
+		return result;
+	}
+	
+	public int peekFront() throws EmptyIntDequeException {
+		if (num <= 0)
+			throw new EmptyIntDequeException();
+		return que[front];
+	}
+	
+	public int peekRear() throws EmptyIntDequeException {
+		if (num <= 0)
+			throw new EmptyIntDequeException();
+		return que[rear];
+	}
+}

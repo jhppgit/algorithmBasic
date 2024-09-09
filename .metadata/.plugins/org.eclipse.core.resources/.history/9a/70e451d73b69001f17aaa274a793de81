@@ -1,0 +1,14 @@
+package algorithm.quiz.ch05;
+
+// 하노이 탑 메서드를 숫자가 아닌 기둥이름 문자열로 출력하도록 수정
+public class Q7 {
+	static void hanoiInt(int n, int x, int y) {
+		int another = 6 - x - y;
+		if (n > 1) {
+			hanoiInt(n - 1, x, another);
+			System.out.printf("[%d]번 원판을 [%d]번 기둥에서 [%d]번 기둥으로 옮겼습니다.\n", n - 1, x, another);
+			hanoiInt(n - 1, another, y);
+		}
+	}
+
+}

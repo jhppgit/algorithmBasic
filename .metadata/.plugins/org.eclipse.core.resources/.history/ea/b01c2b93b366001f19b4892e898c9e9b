@@ -1,0 +1,10 @@
+package algorithm.quiz.ch05;
+
+// 팩토리얼을 재귀호출 없이 작성
+public class Q1 {
+	static int factorial(int x) {
+		int result = 1;
+		for (int i = 1; i <= x; i++)
+			result *= i;
+	}
+}

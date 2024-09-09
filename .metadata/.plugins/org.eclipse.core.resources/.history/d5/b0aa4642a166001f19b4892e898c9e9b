@@ -1,0 +1,5 @@
+package algorithm.quiz.ch04;
+
+public class IntQueueMySelf {
+	private int[] que
+}

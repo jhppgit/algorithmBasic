@@ -1,0 +1,15 @@
+package algorithm.ch05;
+
+// 재귀함수 이해
+public class Recur {
+	// 재귀함수
+	static void recur(int n) {
+		if (n > 0) {
+			recur(n - 1);
+			System.out.print(n + " ");
+			recur(n - 2);
+		}
+	}
+	
+	public Static 
+}

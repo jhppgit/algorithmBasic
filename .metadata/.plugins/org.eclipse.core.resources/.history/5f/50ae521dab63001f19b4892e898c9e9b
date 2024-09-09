@@ -1,0 +1,25 @@
+package algorithm.ch02;
+
+public class MaxOfArrayRand {
+	static int a = 1;
+	int c = 3;
+	public static void main(String[] args) {
+		int b = 2;
+		changeNum(a);
+		changeNum(b);
+		MaxOfArrayRand thisClass = new MaxOfArrayRand();
+		changeNum(thisClass.c);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(thisClass.c);
+		meth(thisClass);
+		System.out.println(thisClass.c);
+	}
+	
+	static void changeNum(int x) {
+		x = 4;
+	}
+	static void meth(MaxOfArrayRand a) {
+		a.c = 6;
+	}
+}

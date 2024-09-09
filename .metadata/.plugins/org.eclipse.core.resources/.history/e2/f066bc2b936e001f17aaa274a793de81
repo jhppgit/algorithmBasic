@@ -1,0 +1,29 @@
+package algorithm.quiz.ch06;
+
+// 퀵정렬의 인수를 두개 사용. 배열과 길이
+// 오버라이딩?
+public class Q14 {
+	static void swap(int[] a, int x, int y) {
+		int t = a[x];
+		a[x] = a[y];
+		a[y] = t;
+	}
+	
+	// 오버라이딩?
+	static void qSort(int[] a, int n) {
+		qSort1(a, 0, n - 1);
+	}
+	
+	static void qSort1(int[] a, int left, int right) {
+		int pl = left;
+		int pr = right;
+		int x = a[(pl + pr) / 2];
+		do {
+			while (a[pl] < x) pl++;
+			while (a[pr] > x) pr--;
+			if (pl <= pr) swap(a, pl, pr);
+		} while (pl <= pr);
+		if (left < pr) qSort1(a, left, pr);
+		if (pl < right) qSort1(a, pl, right);
+	}
+}

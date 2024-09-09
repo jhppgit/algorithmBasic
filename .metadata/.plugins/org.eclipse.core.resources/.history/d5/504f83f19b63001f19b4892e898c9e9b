@@ -1,0 +1,13 @@
+package algorithm.quiz.ch01;
+// 직각이등변삼각형 메서드로 출력
+public class Q14 {
+	public static void main(String[] args) {
+		triangleLB(5);
+	}
+	
+	static void triangleLB(int n) {
+		for (int i = 1; i <= n; i++) {
+			System.out.println("*".repeat(i));
+		}
+	}
+}

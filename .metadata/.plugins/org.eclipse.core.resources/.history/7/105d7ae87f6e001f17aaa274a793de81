@@ -1,0 +1,33 @@
+package algorithm.ch06;
+
+// 퀵 정렬 개선
+// 피벗값을 처음 중간 마지막 요소를 정렬 후 중간값으로.
+// 가운뎃값과 마지막에서 하나 전 요소를 교환.
+// a[left], a[right - 1], a[right]는 이미 정렬돼있으므로
+// a[left + 1] ~ a[right - 2] 에 대해 정렬 수행.(pl++, pr -= 2)
+public class QuickSort3 {
+	// 스왑
+	static void swap(int[] a, int idx1, int idx2) {
+		int t = a[idx1];
+		a[idx1] = a[idx2];
+		a[idx2] = t;
+	}
+	
+	// 처음 중간 마지막 요소를 정렬 후 중간 인덱스 반환
+	static int sort3elem(int[] x, int a, int b, int c) {
+		if (x[a] > x[b]) swap(x, a, b);
+		if (x[b] > x[c]) swap(x, b, c);
+		if (x[a] > x[b]) swap(x, a, b);
+		return b;
+	}
+	
+	// 퀵정렬
+	static void quickSort(int[] a, int left, int right) {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}

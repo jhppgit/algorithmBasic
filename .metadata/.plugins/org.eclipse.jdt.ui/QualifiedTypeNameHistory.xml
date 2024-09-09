@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="algorithm.ch04.IntStack.OverflowIntStackException"/>
+    <fullyQualifiedTypeName name="algorithm.ch04.IntStack.EmptyIntStackException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.Stack.FullGenericStackException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.Stack.EmptyGenericStackException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.Stack"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.Q3.StackCollisionException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.Q3.FullIntStackException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.Q3.EmptyIntStackException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.IntArrayQueue.FullException"/>
+    <fullyQualifiedTypeName name="algorithm.quiz.ch04.IntArrayQueue.EmptyException"/>
+    <fullyQualifiedTypeName name="algorithm.ch04.IntQueue.OverflowIntQueueException"/>
+    <fullyQualifiedTypeName name="algorithm.ch04.IntQueue.EmptyIntQueueException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,39 @@
+package algorithm.quiz.ch03;
+
+import java.util.Scanner;
+
+// 선형검색 과정을 시각적으로 표시
+public class Q2 {
+	static void printArr(int[] a) {
+		for (int i = 0; i < a.length; i++) {
+			System.out.printf("%3d", a[i]);
+		}
+		System.out.println();
+	}
+	
+	static int lSearchSen(int[] a, int n, int key) {
+		a[n] = key;
+		int i = 0;
+		int count = 0;
+		while(true) {
+			System.out.print("   |");
+			printArr(a);
+			if (a[i] == key)
+				break;
+			
+			i++;
+			count++;
+		}
+		return i == n ? -1 : i;
+	}
+	
+	public static void main(String[] args) {
+		int[] x = {6, 4, 3, 2, 1, 9, 8, 0};
+		int num = x.length - 1;
+		System.out.print("key : ");
+		Scanner stdIn = new Scanner(System.in);
+		int key = stdIn.nextInt();
+		stdIn.close();
+		lSearchSen(x, num, key);
+	}
+}

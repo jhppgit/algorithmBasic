@@ -1,0 +1,15 @@
+package algorithm.ch02;
+
+// 배열 요솟값을 초기화하며 배열 선언하기
+public class IntArrayInit {
+	public static void main(String[] args) {
+		int[] a = {1, 2, 3, 4, 5};
+		
+		for (int i = 0; i < a.length; i++) {
+			System.out.println("a[" + i + "] : " + a[i]);
+		}
+		
+		int b;
+		System.out.println(b);
+	}
+}

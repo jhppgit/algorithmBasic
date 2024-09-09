@@ -1,0 +1,15 @@
+package algorithm.ch01;
+
+import java.util.Scanner;
+
+public class Q10 {
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
+		int input = stdIn.nextInt();
+		int count = 0;
+		do {
+			input /= 10;
+			count++;
+		} while(input == 0);
+	}
+}

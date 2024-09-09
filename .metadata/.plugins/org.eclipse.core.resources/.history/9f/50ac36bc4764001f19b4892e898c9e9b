@@ -1,0 +1,33 @@
+package algorithm.quiz.ch02;
+
+import java.util.Scanner;
+
+public class Q6 {
+	static int cardConv(int input, int radix, char[] chArr) {
+		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("10진수를 기수 변환합니다.");
+		Scanner stdIn = new Scanner(System.in);
+		int input, radix, digits;
+		char[] chArr = new char[32];
+		do {
+			System.out.print("변환하는 음이 아닌 정수 : ");
+			input = stdIn.nextInt();
+		} while (input < 0);
+		
+		do {
+			System.out.print("어떤 진수로 변환할까요? (2 ~ 36) : ");
+			radix = stdIn.nextInt();
+		} while(radix < 2 || radix > 36);
+		
+		digits = cardConv(input, radix, chArr);
+		System.out.print(radix + "진수로 ");
+		for(int i = 0; i < digits; i++) {
+			System.out.print(chArr[i]);
+		}
+		System.out.println("입니다.");
+		
+	}
+}

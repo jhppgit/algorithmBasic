@@ -1,6 +1,0 @@
-package algorithm.quiz.ch04;
-
-// 양방향 큐 구현
-public class deque {
-
-}

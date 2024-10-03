@@ -1,6 +1,0 @@
-package algorithm.ch04;
-
-// int형 고정 큐의 사용 예
-public class IntQueueTester {
-
-}

@@ -1,0 +1,98 @@
+package algorithm.ch09;
+
+import java.util.Comparator;
+
+// 이진검색트리
+public class BinTree<K, V> {
+	// 노드
+	static class Node<K, V> {
+		private K key;
+		private V data;
+		private Node<K, V> left; // 왼쪽 포인터(자식)
+		private Node<K, V> right; // 오른쪽 포인터(자식)
+		
+		// 생성자
+		Node(K key, V data, Node<K, V> left, Node<K, V> right) {
+			this.key = key;
+			this.data = data;
+			this.left = left;
+			this.right = right;
+		}
+		
+		// 키값을 반환
+		K getKey() {
+			return key;
+		}
+		
+		V getValue() {
+			return data;
+		}
+		
+		void print() {
+			System.out.println(data);
+		}
+	}
+	
+	private Node<K, V> root; // 루트
+	private Comparator<? super K> comparator = null;
+	
+	// 생성자
+	public BinTree() {
+		root = null; // 자연 순서에 따라 키값을 비교
+	}
+	
+	public BinTree(Comparator<? super K> c) {
+		this();
+		comparator = c;
+	}
+	
+	// 두 키값을 비교
+	private int comp(K key1, K key2) {
+		return (comparator == null) ? ((Comparable<K>)key1).compareTo(key2) // comparator가 정의되지 않았으면 자료형에 맞는거 알아서
+				: comparator.compare(key1, key2); // 정의됐으면 comparator 사용
+	}
+	
+	// 키로 검색
+	public V search(K key) {
+		Node<K, V> p = root; // 루트에 주목
+		
+		while (true) {
+			if (p == null) // 더이상 진행할 수 없으면
+				return null; // 검색 실패
+			int cond = comp(key, p.getKey()); // key와 노드p의 키값을 비교
+			if (cond == 0) // 같으면
+				return p.getValue(); // 검색 성공
+			else if (cond < 0) // key쪽이 작으면
+				p = p.left; // 왼쪽 서브트리에서 검색
+			else // key쪽이 크면
+				p = p.right; // 오른쪽 서브트리에서 검색
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
